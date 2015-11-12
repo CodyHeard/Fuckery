@@ -1,0 +1,5 @@
+﻿<cf:project defaultNamespace="TennisClubLadder" partType="Surface" xmlns:cf="http://www.softfluent.com/codefluent/2005/1">
+  <cf:surface name="Clubs">
+    <cf:selector name="_ns_Clubs" expression="/*[@Namespace='Clubs' and @NodeType!='Set']" />
+  </cf:surface>
+</cf:project>

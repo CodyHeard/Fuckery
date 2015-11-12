@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30F54F33-7DD0-4962-ABF5-1E3F538D044A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TennisClubLadder.BusinessLayer</RootNamespace>
+    <AssemblyName>TennisClubLadder.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFluent.Runtime">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SoftFluent\CodeFluent\Modeler\CodeFluent.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeFluent.Runtime.Web">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SoftFluent\CodeFluent\Modeler\CodeFluent.Runtime.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clubs\Club.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\ClubAdmin.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\ClubAdminCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\ClubCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\Court.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\CourtCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\Facility.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\FacilityCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\Surface.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Clubs\SurfaceCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\Challenge.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\ChallengeCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\ChallengePlayer.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\ChallengePlayerCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\ChallengeStatus.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\ChallengeStatusCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\Gender.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\GenderCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\Ladder.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\LadderCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\LadderPlayer.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\LadderPlayerCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\LadderPoints.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\LadderPointsCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\MatchFormat.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\MatchFormatCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\PlayerAvailability.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\PlayerAvailabilityCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\PlayerRating.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\PlayerRatingCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\SetResult.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Ladders\SetResultCollection.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Role.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\RoleClaim.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\RoleClaimCollection.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\RoleCollection.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\User.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\UserClaim.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\UserClaimCollection.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\UserCollection.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\UserLogin.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Users\UserLoginCollection.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\BitsServer.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\HttpHandler.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\Security\RoleStore.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\Security\UserStore.cs">
+      <SubType>Code</SubType>
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+    <Compile Include="_cf_rt.cs">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TennisClubLadder.ResX">
+      <CodeFluentProducer>dfb610b139c10aa639b0bc1217f8c630</CodeFluentProducer>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="PersistanceScripts\TennisClubLadder_runtime.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersistanceScripts\TennisClubLadder_tables.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersistanceScripts\TennisClubLadder_views.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersistanceScripts\TennisClubLadder_table_diffs.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersistanceScripts\TennisClubLadder_procedures.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersistanceScripts\TennisClubLadder_relations_drop.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersistanceScripts\TennisClubLadder_relations_add.sql">
+      <CodeFluentProducer>04268f92b088b70f20d3f9d17ccaaab1</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Profiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

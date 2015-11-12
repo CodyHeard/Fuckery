@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00000005-0004-0000-0000-000000C0DEF1}") = "TennisClubLadder.Model", "TennisClubLadder.Model\TennisClubLadder.Model.cfxproj", "{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisClubLadder.BusinessLayer", "TennisClubLadder.BusinessLayer\TennisClubLadder.BusinessLayer.csproj", "{30F54F33-7DD0-4962-ABF5-1E3F538D044A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisClubLadder.Web", "TennisClubLadder.Web\TennisClubLadder.Web.csproj", "{A78352A9-BF79-42B6-8CC8-339C741F2312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Debug|.NET.ActiveCfg = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Debug|.NET.Build.0 = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Debug|Any CPU.ActiveCfg = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Debug|Mixed Platforms.ActiveCfg = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Debug|Mixed Platforms.Build.0 = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Release|.NET.ActiveCfg = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Release|.NET.Build.0 = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Release|Any CPU.ActiveCfg = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Release|Mixed Platforms.ActiveCfg = Release|.NET
+		{233AECA2-F9CC-4332-9CE7-AE0DB87ADB73}.Release|Mixed Platforms.Build.0 = Release|.NET
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Release|.NET.ActiveCfg = Release|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{30F54F33-7DD0-4962-ABF5-1E3F538D044A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Release|.NET.ActiveCfg = Release|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A78352A9-BF79-42B6-8CC8-339C741F2312}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
