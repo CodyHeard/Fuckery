@@ -14,14 +14,6 @@ namespace TennisClubLadder.Web.Controllers
         
         public ActionResult Index()
         {
-            Club newClub = new Club()
-            {
-                FullName = "Surry Hill Tennis Club",
-                Phone = "96584521"
-            };
-
-            newClub.Save();
-            
             return View();
         }
 

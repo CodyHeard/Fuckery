@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using TennisClubLadder.Web.Security;
+using TennisClubLadder.Security;
 using Users;
 
 namespace TennisClubLadder.Web

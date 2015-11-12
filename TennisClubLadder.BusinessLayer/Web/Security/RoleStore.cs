@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TennisClubLadder.Web.Security
+namespace TennisClubLadder.Security
 {
     
     
