@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align:center;margin-top: 15px;">
+    <button id="messageButton" class="k-primary" >Message Player</button>
+    <button id="viewButton" class="k-primary">View Player Profile</button>
+</div>
+
+
+<div>
+    <div id="window">
+        <ul>
+            <li><h4>Subject</h4> <input type="text" data-bind="value: textValue" class="k-textbox" /></li>
+            <li><h4>Message</h4> <textarea data-bind="value: textareaValue" class="k-textbox" style="height: 150px; width: 200px;"></textarea></li>
+        </ul>
+
+        <button id="sendButton" class="k-primary">Send</button>
+    </div>
+
+
+    <!--This script displays a popup for messaging a player-->
+    <script>
+        $(document).ready(function () {
+            var window = $("#window");
+
+            $("#messageButton").click(function (e) {
+                window.data("kendoWindow").open();
+            });
+
+            $("#close").click(function (e) {
+                window.data("kendoWindow").close();
+            });
+
+            window.kendoWindow({
+                width: "300px",
+                height: "320px",
+                title: "Message Player",
+                actions: ["Close"],
+                visible: false
+                
+            });
+        });
+    </script>
+
+    
+</div>
