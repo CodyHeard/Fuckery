@@ -6,19 +6,15 @@ using System.Web.Mvc;
 
 namespace TennisClubLadder.Web.Controllers
 {
-    public class PlayerController : Controller
+    public class MemberController : Controller
     {
-        // GET: Player
+        // GET: Member
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Home()
-        {
-            return View();
-        }
 
-        public ActionResult Challenges()
+        public ActionResult Home()
         {
             return View();
         }
@@ -27,15 +23,7 @@ namespace TennisClubLadder.Web.Controllers
         {
             return View();
         }
-        
-        public ActionResult AllLadders()
-        {
-            return View();
-        }
 
-        public ActionResult Ladder()
-        {
-            return View();
-        }
+
     }
 }
